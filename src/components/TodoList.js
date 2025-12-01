@@ -10,7 +10,7 @@ export default function TodoList({ todos, handleComplete }) {
           <li key={todo.id}>
             {todo.title}{" "}
             {!todo.completed && (
-              <button onClick={() => handleComplete(todo.id)}>
+              <button onClick={handleComplete}>
                 Complete
               </button>
             )}

@@ -10,14 +10,11 @@ const App = () => {
     { id: 3, title: "Deploy the React app", completed: false },
   ]);
 
-  const handleComplete = (id) => {
+   const handleComplete = () => {
     setTodos((prev) =>
-      prev.map((todo) =>
-        todo.id === id ? { ...todo, completed: true } : todo
-      )
+      prev.map((todo) => ({ ...todo, completed: true }))
     );
   };
-
   return (
     <div>
         {/* Do not remove the main div */}
