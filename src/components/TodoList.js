@@ -4,15 +4,12 @@ export default function TodoList({ todos, handleComplete }) {
   return (
     <div>
       <h2>Child Component</h2>
-
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            {todo.title}{" "}
+            {todo.text}{" "}
             {!todo.completed && (
-              <button onClick={handleComplete}>
-                Complete
-              </button>
+              <button onClick={() => handleComplete(todo.id)}>Complete</button>
             )}
           </li>
         ))}
