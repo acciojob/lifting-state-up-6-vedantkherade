@@ -17,8 +17,10 @@ const App = () => {
   ]);
 
   function handleComplete(id) {
-    const rewrite=todos.map(todo=>todo.id===id ? {...todo,completed:true}:todo)
-    setTodos(rewrite)
+    const rewrite = todos.map((todo) =>
+      todo.id === id ? { ...todo, completed: true } : todo
+    );
+    setTodos(rewrite);
   }
 
   return (
